@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ./native/dcat -n contents/quote.txt
+    volumes:
+      - .:/usr/src/app
+
